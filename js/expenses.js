@@ -3,7 +3,7 @@ const expenseForm = document.getElementById('expenseForm');
 const expenseTableBody = document.getElementById('expenseTableBody');
 
 // Handle form submission
-expenseForm.addEventListener('submit', (e) => {
+expenseForm.addEventListener('submits', (e) => {
   e.preventDefault();
 
   const date = document.getElementById('date').value;

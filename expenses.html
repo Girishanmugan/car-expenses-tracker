@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Car Expense Tracker - Expenses</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
@@ -20,52 +20,41 @@
   </header>
 
   <main>
-    <section class="expense-form">
+    <div class="expense-form">
       <h2>Add Expense</h2>
-      <form id="expenseForm">
+      <form id="expenseForm" action="http://localhost:3000/expense" method="post">
         <div class="form-group">
-          <label for="date">Date:</label>
-          <input type="date" id="date" required />
-        </div>
-        <div class="form-group">
-          <label for="category">Category:</label>
-          <select id="category" required>
+          Date:<input type="date" name="date" required>
+          Category:<select name="category" required>
             <option value="Fuel">Fuel</option>
             <option value="Maintenance">Maintenance</option>
             <option value="Insurance">Insurance</option>
             <option value="Toll">Toll</option>
             <option value="Other">Other</option>
           </select>
-        </div>
-        <div class="form-group">
-          <label for="amount">Amount ($):</label>
-          <input type="number" id="amount" required />
-        </div>
-        <div class="form-group">
-          <label for="notes">Notes:</label>
-          <input type="text" id="notes" />
+          Amount (₹):<input type="number" name="amount" required>
+          Notes:<input type="text" name="note">
         </div>
         <button type="submit">Add Expense</button>
       </form>
-    </section>
+    </div>
 
-    <section class="expense-list">
+    <div class="expense-list">
       <h2>Expense History</h2>
       <table>
         <thead>
           <tr>
             <th>Date</th>
             <th>Category</th>
-            <th>Amount ($)</th>
+            <th>Amount (₹)</th>
             <th>Notes</th>
             <th>Actions</th>
           </tr>
         </thead>
         <tbody id="expenseTableBody">
-          <!-- Data will be added here dynamically -->
         </tbody>
       </table>
-    </section>
+    </div>
   </main>
 
   <script src="js/expenses.js"></script>

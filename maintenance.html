@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Car Expense Tracker - Maintenance</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -21,41 +21,33 @@
   </header>
 
   <main>
-    <section class="maintenance-form">
+    <div class="maintenance-form">
       <h2>Log Maintenance Activity</h2>
       <form id="maintenanceForm">
         <div class="form-group">
-          <label for="maintenanceDate">Date:</label>
-          <input type="date" id="maintenanceDate" required />
-        </div>
-        <div class="form-group">
-          <label for="maintenanceType">Type of Maintenance:</label>
-          <input type="text" id="maintenanceType" required />
-        </div>
-        <div class="form-group">
-          <label for="maintenanceCost">Total Cost ($):</label>
-          <input type="number" id="maintenanceCost" step="0.01" required />
+          Date:<input type="date" id="maintenanceDate" required>
+          Type of Maintenance:<input type="text" id="maintenanceType" required>\
+          Total Cost (₹):<input type="number" id="maintenanceCost" step="0.01" required>
         </div>
         <button type="submit">Add Maintenance</button>
       </form>
-    </section>
+    </div>
 
-    <section class="maintenance-list">
+    <div class="maintenance-list">
       <h2>Maintenance History</h2>
       <table>
         <thead>
           <tr>
             <th>Date</th>
             <th>Type of Maintenance</th>
-            <th>Total Cost ($)</th>
+            <th>Total Cost (₹)</th>
             <th>Actions</th>
           </tr>
         </thead>
         <tbody id="maintenanceTableBody">
-          <!-- Data will be added dynamically here -->
         </tbody>
       </table>
-    </section>
+    </div>
   </main>
 
   <script src="js/maintenance.js"></script>

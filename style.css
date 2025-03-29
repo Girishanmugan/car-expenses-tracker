@@ -1,16 +1,22 @@
-/* General Reset and Styling */
+/* Global Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, sans-serif;
+  
 }
 
 body {
   background-color: #f4f4f9;
   color: #333;
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
 }
 
+/* Header */
 header {
   background-color: #4caf50;
   color: white;
@@ -18,6 +24,7 @@ header {
   text-align: center;
 }
 
+/* Navigation */
 nav {
   display: flex;
   justify-content: center;
@@ -63,14 +70,7 @@ nav a:hover {
   font-weight: bold;
 }
 
-@media (max-width: 768px) {
-  .summary {
-      flex-direction: column;
-      align-items: center;
-  }
-}
-
-/* Form Styling (General for all forms) */
+/* Forms */
 .form-container {
   background-color: #ffffff;
   padding: 20px;
@@ -79,49 +79,45 @@ nav a:hover {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.form-container h2 {
-  margin-bottom: 10px;
+.signup-container,
+.login-container {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 320px;
 }
 
+/* Form Group */
 .form-group {
-  margin-bottom: 10px;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
+  margin-bottom: 15px;
 }
 
 .form-group input,
 .form-group select {
   width: 100%;
-  padding: 8px;
+  padding: 10px;
   border: 1px solid #ddd;
   border-radius: 5px;
   outline: none;
+  font-size: 16px;
 }
 
-/* Button Styling (General for all buttons) */
+/* Buttons */
 button[type="submit"] {
-  padding: 10px 15px;
+  background-color: #4caf50;
+  color: white;
+  padding: 12px;
+  width: 100%;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
-  color: white;
+  font-size: 16px;
+  transition: background-color 0.3s;
 }
 
 button[type="submit"]:hover {
-  opacity: 0.9;
-}
-
-/* Individual Button Colors */
-button[type="submit"].green {
-  background-color: #4caf50;
-}
-
-button[type="submit"].green:hover {
   background-color: #45a049;
 }
 
@@ -133,7 +129,32 @@ button[type="submit"].blue:hover {
   background-color: #2980b9;
 }
 
-/* Table Styling (General for all lists) */
+button[type="submit"].green {
+  background-color: #4caf50;
+}
+
+button[type="submit"].green:hover {
+  background-color: #45a049;
+}
+
+/* Error Message */
+p {
+  text-align: center;
+  margin-top: 15px;
+  color: #333;
+}
+
+p a {
+  color: #4caf50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+/* Tables */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -172,17 +193,11 @@ table tr:hover {
   background-color: #c0392b;
 }
 
-/* Section Colors */
+/* Section Headings */
 .expense-form h2,
-.expense-list h2 {
-  color: #4caf50;
-}
-
+.expense-list h2,
 .trip-form h2,
-.trip-list h2 {
-  color: #4caf50;
-}
-
+.trip-list h2,
 .fuel-form h2,
 .fuel-list h2 {
   color: #4caf50;

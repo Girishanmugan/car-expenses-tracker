@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Car Expense Tracker - Trip Log</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -21,38 +21,22 @@
   </header>
 
   <main>
-    <section class="trip-form">
+    <div class="trip-form">
       <h2>Log New Trip</h2>
-      <form id="tripForm">
+      <form id="tripForm" action="http://Localhost:3000/trip" method="post">
         <div class="form-group">
-          <label for="tripDate">Date:</label>
-          <input type="date" id="tripDate" required />
-        </div>
-        <div class="form-group">
-          <label for="startLocation">Start Location:</label>
-          <input type="text" id="startLocation" required />
-        </div>
-        <div class="form-group">
-          <label for="endLocation">End Location:</label>
-          <input type="text" id="endLocation" required />
-        </div>
-        <div class="form-group">
-          <label for="distance">Distance (km):</label>
-          <input type="number" id="distance" required />
-        </div>
-        <div class="form-group">
-          <label for="fuelUsed">Fuel Used (L):</label>
-          <input type="number" id="fuelUsed" required />
-        </div>
-        <div class="form-group">
-          <label for="cost">Total Cost ($):</label>
-          <input type="number" id="cost" required />
+          Date:<input type="date" name="date" required>
+          Start Location:<input type="text" name="startlocation" required>
+          End Location:<input type="text" name="endlocation" required>
+          Distance (km):<input type="number" name="distance" required>
+          Fuel Used (L):<input type="number" name="fuel" required>
+          Total Cost (₹):<input type="number" name="cost" required>
         </div>
         <button type="submit">Add Trip</button>
       </form>
-    </section>
+    </div>
 
-    <section class="trip-list">
+    <div class="trip-list">
       <h2>Trip History</h2>
       <table>
         <thead>
@@ -62,16 +46,15 @@
             <th>End Location</th>
             <th>Distance (km)</th>
             <th>Fuel Used (L)</th>
-            <th>Cost ($)</th>
-            <th>Cost/km ($)</th>
+            <th>Cost (₹)</th>
+            <th>Cost/km (₹)</th>
             <th>Actions</th>
           </tr>
         </thead>
         <tbody id="tripTableBody">
-          <!-- Data will be added here dynamically -->
         </tbody>
       </table>
-    </section>
+    </div>
   </main>
 
   <script src="js/trips.js"></script>
